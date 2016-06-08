@@ -1,0 +1,65 @@
+{% extends "PgGsbFraisBundle::accueil.html.twig" %}
+{% block body %}
+{% block bloc1 %}
+<div id="contenu">
+<h2>Ajouter des tablettes</h2>
+
+<div class="well">
+<form action="{{path('pg_gsb_frais_ajouttablette')}}" method="POST">
+  {{ form(form) }}
+ {{ form_rest(form) }} 
+
+</form>
+
+
+<center><table style="font-size: 20px;">
+    {% set boucle = 0 %}
+    {% set test = 0 %}
+	         {% for uneM in Listetablette %}
+	          <form action="{{ path('pg_gsb_frais_ajouttablette') }}" method="POST">
+                    <input type="hidden" name="test" value="{{test}}"/>
+              {% if boucle < 1 %}
+                              
+                            
+                     <tr>
+                        <th><h2>Marque</h2></th>
+                        
+                        <th><h2>Mémoire externe</h2></th>
+                   
+                        <th><h2>Mémoire interne</h2></th>
+                       
+                        <th><h2> Couleur</h2> </th>
+
+                        <th><h2> Modele</h2> </th>
+                       
+                        <th><h2> Supression</h2> </th>
+                                        
+                        {% set boucle = boucle + 1 %}
+                     </tr>
+                   
+                    {% endif %}
+
+                  
+	         <tr>
+
+             <td><h2>{{ uneM.nomt}}</h2></td>
+             <td><h2>{{ uneM.ext}}</h2></td>
+             <td><h2>{{ uneM.inter}}</h2></td>
+             <td><h2>{{ uneM.couleur}}</h2></td>
+             <td><h2>{{ uneM.modele}}</h2></td>
+                   <td><a href="{{ path('pg_gsb_frais_delete') }}"><h2>Suppprimer</h2></a>
+			</tr>
+                {# test #}
+                {% set test = test + 1 %}
+ 
+         </form>
+             {%endfor%}
+</table></center>
+
+</div>
+			
+
+</div>
+
+{% endblock %}
+{% endblock %}

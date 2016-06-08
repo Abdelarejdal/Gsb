@@ -1,0 +1,9 @@
+{% extends "PgGsbFraisBundle::accueil.html.twig" %}
+<div class ="erreur">
+<ul>
+<?php 
+if(is_null($ExistanceVisiteur)){
+      echo "<li>$erreur</li>";
+	}
+?>
+</ul></div>

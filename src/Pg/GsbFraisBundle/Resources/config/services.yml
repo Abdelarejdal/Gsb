@@ -1,0 +1,9 @@
+parameters:
+    db.host: mysql:host=localhost
+    db.name: dbname=gsbphp
+    db.user: root
+    db.mdp:	root
+services:
+    pg_gsb_frais.pdo:
+        class: Pg\GsbFraisBundle\services\PdoGsb
+        arguments: [%db.host%,%db.name%,%db.user%,%db.mdp%]

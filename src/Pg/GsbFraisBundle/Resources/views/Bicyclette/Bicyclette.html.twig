@@ -1,0 +1,58 @@
+{% extends "PgGsbFraisBundle::accueil.html.twig" %}
+{% block body %}
+{% block bloc1 %}
+<div id="contenu">
+<h2>Ma bicyclette</h2>
+<center><table style="font-size: 20px;">
+
+             
+             {% for B in Bicyclette %}
+            
+             
+                          
+                            
+                     <tr>
+                        
+                         <th><h2>Nom </h2></th>
+                        <th><h2>Prenom</h2></th>
+                        <th><h2>Marque</th>
+                        <th><h2>Genre</h2></th>
+                        <th><h2>Couleur</h2></th>
+                       
+                        
+                      
+                      
+                      
+                        
+                     </tr>
+                   
+                    
+                  
+             <tr><td><h2>{{B.nom}}</h2></td>
+                <td><h2>{{B.prenom}}</h2></td>
+                <td><h2>{{B.marque}}</h2></td>
+                <td><h2>{{B.genre}}</h2></td>
+                <td><h2>{{B.couleur}}</h2></td>
+              
+
+             </tr>
+             
+             
+            
+             {%endfor%}
+           
+            
+
+</table></center>
+<br /><br />
+<div class="well">
+
+
+</div>
+            
+
+</div>
+
+{% endblock %}
+{% endblock %}
+

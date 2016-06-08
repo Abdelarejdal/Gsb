@@ -1,0 +1,20 @@
+{% extends "PgGsbFraisBundle::accueil.html.twig" %}
+{% block body %}
+{% block bloc1 %}
+<div id="contenu">
+<h2>Affectation des tablettes</h2>
+
+<div class="well">
+<form action="{{path('pg_gsb_frais_affectationtablette')}}" method="POST">
+  {{ form(form) }}
+ {{ form_rest(form) }} 
+
+</form>
+
+</div>
+			
+
+</div>
+
+{% endblock %}
+{% endblock %}

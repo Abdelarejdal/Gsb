@@ -1,0 +1,70 @@
+{% extends "PgGsbFraisBundle::accueil.html.twig" %}
+{% block body %}
+{% block bloc1 %}
+<div id="contenu">
+<h2>Ma Tablette</h2>
+<center><table style="font-size: 20px;">
+
+			 {% set boucle = 0 %}
+	         {% for I in intablette %}
+             {% for T in tablette %}
+             {% for E in extablette %}
+             {% for N in nom %}
+             {% for P in prenom %}
+             {% for C in couleur %}
+             {% for M in modele %}
+             {% if boucle < 1 %}
+                          
+                            
+                     <tr>
+                        
+                         <th><h2>Nom </h2></th>
+                        <th><h2>Prenom</h2></th>
+                        <th><h2>Marque</th>
+                        <th><h2>Mémoire interne</h2></th>
+                        <th><h2>Mémoire externe</h2></th>
+                        <th><h2>Couleur</h2></th>
+                        <th><h2>Modele</h2></th>
+                        
+                      
+                      
+                      
+                        
+                     </tr>
+                   
+                    {% set boucle = boucle + 1 %} 
+                  
+	         <tr><td><h2>{{ N}}</h2></td>
+                <td><h2>{{ P}}</h2></td>
+                <td><h2>{{ T}}</h2></td>
+                <td><h2>{{ I}}</h2></td>
+                <td><h2>{{ E}}</h2></td>
+                <td><h2>{{ C}}</h2></td>
+                <td><h2>{{ M}}</h2></td>
+                
+
+             </tr>
+             
+             {% endif %}
+            
+             {%endfor%}
+             {%endfor%}
+             {%endfor%}
+             {%endfor%}
+             {%endfor%}
+              {%endfor%}
+             {%endfor%}
+
+</table></center>
+<br /><br />
+<div class="well">
+
+
+</div>
+			
+
+</div>
+
+{% endblock %}
+{% endblock %}
+

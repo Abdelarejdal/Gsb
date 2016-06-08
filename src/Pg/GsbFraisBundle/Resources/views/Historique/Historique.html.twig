@@ -1,0 +1,23 @@
+{% extends "PgGsbFraisBundle::accueil.html.twig" %}
+{% block body %}
+{% block bloc1 %}
+<div id="contenu">
+<h2>Historique des Véhicules de tous les utilisateurs</h2>
+<table>
+	         {% for uneL in Historique%}
+	        <th><h3>nom: {{ uneL.nom}}</h3>  
+	        <br/>attribué: {{ uneL.dateD}}
+           	 <br/>matricule: {{ uneL.idnumImmat}}
+             <br/>marque: {{ uneL.marque}}
+             <br/>modele: {{ uneL.modele}}
+             <br/>couleur: {{ uneL.couleur}}
+             <br/>rendu: {{ uneL.dateF}}</th>
+
+             
+             {%endfor%}
+</table>			
+
+</div>
+
+{% endblock %}
+{% endblock %}
